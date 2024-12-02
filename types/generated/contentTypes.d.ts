@@ -403,6 +403,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
 export interface ApiCartCart extends Struct.CollectionTypeSchema {
   collectionName: 'carts';
   info: {
+    description: '';
     displayName: 'cart';
     pluralName: 'carts';
     singularName: 'cart';
@@ -419,6 +420,7 @@ export interface ApiCartCart extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     productId: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    totalQuantity: Schema.Attribute.BigInteger;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
