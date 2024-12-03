@@ -513,6 +513,37 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOrderdataOrderdata extends Struct.CollectionTypeSchema {
+  collectionName: 'orderdatas';
+  info: {
+    displayName: 'orderdata';
+    pluralName: 'orderdatas';
+    singularName: 'orderdata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::orderdata.orderdata'
+    > &
+      Schema.Attribute.Private;
+    productId: Schema.Attribute.String;
+    profileId: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    totalCost: Schema.Attribute.BigInteger;
+    totalQuantity: Schema.Attribute.BigInteger;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -1110,6 +1141,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::inbox.inbox': ApiInboxInbox;
       'api::order.order': ApiOrderOrder;
+      'api::orderdata.orderdata': ApiOrderdataOrderdata;
       'api::product.product': ApiProductProduct;
       'api::profile.profile': ApiProfileProfile;
       'plugin::content-releases.release': PluginContentReleasesRelease;

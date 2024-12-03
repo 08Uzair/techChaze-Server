@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orderdatas",
+  "info": {
+    "singularName": "orderdata",
+    "pluralName": "orderdatas",
+    "displayName": "orderdata"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profileId": {
+      "type": "string"
+    },
+    "totalCost": {
+      "type": "biginteger"
+    },
+    "totalQuantity": {
+      "type": "biginteger"
+    },
+    "productId": {
+      "type": "string"
+    }
+  }
+}
