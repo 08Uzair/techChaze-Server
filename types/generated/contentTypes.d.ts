@@ -460,6 +460,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiGoodGood extends Struct.CollectionTypeSchema {
   collectionName: 'goods';
   info: {
+    description: '';
     displayName: 'good';
     pluralName: 'goods';
     singularName: 'good';
@@ -473,7 +474,7 @@ export interface ApiGoodGood extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     discount: Schema.Attribute.BigInteger;
     image: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

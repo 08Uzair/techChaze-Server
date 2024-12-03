@@ -4,7 +4,8 @@
   "info": {
     "singularName": "good",
     "pluralName": "goods",
-    "displayName": "good"
+    "displayName": "good",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "stock": {
       "type": "biginteger"
