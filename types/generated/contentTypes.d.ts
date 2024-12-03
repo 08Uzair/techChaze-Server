@@ -457,6 +457,39 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGoodGood extends Struct.CollectionTypeSchema {
+  collectionName: 'goods';
+  info: {
+    displayName: 'good';
+    pluralName: 'goods';
+    singularName: 'good';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    discount: Schema.Attribute.BigInteger;
+    image: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::good.good'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    price: Schema.Attribute.BigInteger;
+    publishedAt: Schema.Attribute.DateTime;
+    rank: Schema.Attribute.BigInteger;
+    stock: Schema.Attribute.BigInteger;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiInboxInbox extends Struct.CollectionTypeSchema {
   collectionName: 'inboxes';
   info: {
@@ -1139,6 +1172,7 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::cart.cart': ApiCartCart;
       'api::category.category': ApiCategoryCategory;
+      'api::good.good': ApiGoodGood;
       'api::inbox.inbox': ApiInboxInbox;
       'api::order.order': ApiOrderOrder;
       'api::orderdata.orderdata': ApiOrderdataOrderdata;
