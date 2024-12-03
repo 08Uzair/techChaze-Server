@@ -476,7 +476,7 @@ export interface ApiGoodGood extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     discount: Schema.Attribute.BigInteger;
-    image: Schema.Attribute.String;
+    image: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::good.good'> &
       Schema.Attribute.Private;
