@@ -38,6 +38,9 @@
     },
     "image": {
       "type": "text"
+    },
+    "profileId": {
+      "type": "string"
     }
   }
 }

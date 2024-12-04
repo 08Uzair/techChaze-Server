@@ -482,6 +482,7 @@ export interface ApiGoodGood extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     price: Schema.Attribute.BigInteger;
+    profileId: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     rank: Schema.Attribute.BigInteger;
     stock: Schema.Attribute.BigInteger;
