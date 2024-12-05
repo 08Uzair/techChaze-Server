@@ -41,6 +41,9 @@
     },
     "adminProfileId": {
       "type": "string"
+    },
+    "isDeleted": {
+      "type": "boolean"
     }
   }
 }
