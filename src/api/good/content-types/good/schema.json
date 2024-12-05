@@ -39,7 +39,7 @@
     "image": {
       "type": "text"
     },
-    "profileId": {
+    "adminProfileId": {
       "type": "string"
     }
   }

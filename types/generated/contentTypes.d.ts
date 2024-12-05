@@ -469,6 +469,7 @@ export interface ApiGoodGood extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    adminProfileId: Schema.Attribute.String;
     category: Schema.Attribute.String;
     color: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
@@ -482,7 +483,6 @@ export interface ApiGoodGood extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     price: Schema.Attribute.BigInteger;
-    profileId: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     rank: Schema.Attribute.BigInteger;
     stock: Schema.Attribute.BigInteger;
