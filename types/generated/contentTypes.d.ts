@@ -541,7 +541,6 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     productId: Schema.Attribute.String;
     profileId: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    quantity: Schema.Attribute.BigInteger;
     totalCost: Schema.Attribute.BigInteger;
     totalQuantity: Schema.Attribute.BigInteger;
     updatedAt: Schema.Attribute.DateTime;
@@ -553,6 +552,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
 export interface ApiOrderdataOrderdata extends Struct.CollectionTypeSchema {
   collectionName: 'orderdatas';
   info: {
+    description: '';
     displayName: 'orderdata';
     pluralName: 'orderdatas';
     singularName: 'orderdata';
@@ -573,6 +573,7 @@ export interface ApiOrderdataOrderdata extends Struct.CollectionTypeSchema {
     productId: Schema.Attribute.String;
     profileId: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    quantity: Schema.Attribute.BigInteger;
     totalCost: Schema.Attribute.BigInteger;
     totalQuantity: Schema.Attribute.BigInteger;
     updatedAt: Schema.Attribute.DateTime;

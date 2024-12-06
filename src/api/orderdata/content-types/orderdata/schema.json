@@ -4,7 +4,8 @@
   "info": {
     "singularName": "orderdata",
     "pluralName": "orderdatas",
-    "displayName": "orderdata"
+    "displayName": "orderdata",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,9 @@
     },
     "productId": {
       "type": "string"
+    },
+    "quantity": {
+      "type": "biginteger"
     }
   }
 }
