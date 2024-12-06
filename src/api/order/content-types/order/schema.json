@@ -26,6 +26,9 @@
     },
     "profileId": {
       "type": "string"
+    },
+    "quantity": {
+      "type": "biginteger"
     }
   }
 }

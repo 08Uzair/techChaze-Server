@@ -541,6 +541,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     productId: Schema.Attribute.String;
     profileId: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    quantity: Schema.Attribute.BigInteger;
     totalCost: Schema.Attribute.BigInteger;
     totalQuantity: Schema.Attribute.BigInteger;
     updatedAt: Schema.Attribute.DateTime;
