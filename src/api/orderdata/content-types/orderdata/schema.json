@@ -22,7 +22,7 @@
       "type": "biginteger"
     },
     "productId": {
-      "type": "string"
+      "type": "text"
     },
     "quantity": {
       "type": "biginteger"

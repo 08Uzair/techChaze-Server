@@ -570,7 +570,7 @@ export interface ApiOrderdataOrderdata extends Struct.CollectionTypeSchema {
       'api::orderdata.orderdata'
     > &
       Schema.Attribute.Private;
-    productId: Schema.Attribute.String;
+    productId: Schema.Attribute.Text;
     profileId: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     quantity: Schema.Attribute.BigInteger;
