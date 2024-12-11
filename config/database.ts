@@ -5,13 +5,12 @@ export default ({ env }) => {
 
   const connections = {
     mysql: {
-      filename: env('DATABASE_FILENAME', path.join(__dirname, '..', '.tmp/data.db')),
       connection: {
-        host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
+        host: env('DATABASE_HOST', 'db.rutljukexshljxkkrlmk.supabase.co'),
+        port: env.int('DATABASE_PORT', 5432),
+        database: env('DATABASE_NAME', 'postgres'),
+        user: env('DATABASE_USERNAME', 'postgres'),
+        password: env('DATABASE_PASSWORD', 'techChaze@123'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
