@@ -5,6 +5,7 @@ export default ({ env }) => {
 
   const connections = {
     mysql: {
+      filename: env('DATABASE_FILENAME', path.join(__dirname, '..', '.tmp/data.db')),
       connection: {
         host: env('DATABASE_HOST', 'localhost'),
         port: env.int('DATABASE_PORT', 3306),
